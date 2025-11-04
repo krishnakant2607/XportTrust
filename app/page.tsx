@@ -66,123 +66,65 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-indigo-50 -z-10"></div>
-        <div className="absolute top-20 right-0 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-indigo-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse delay-1000"></div>
+      {/* Hero Section - Blue Gradient Background */}
+      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800">
+        {/* Background Pattern (optional subtle pattern) */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-white rounded-full filter blur-3xl"></div>
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-white rounded-full filter blur-3xl"></div>
+        </div>
         
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left Column - Content */}
-            <div className="text-left space-y-8">
-              <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 rounded-full px-4 py-2">
-                <Award className="h-4 w-4 text-blue-600" />
-                <span className="text-sm font-medium text-blue-900">Trusted by India's Leading Exporters</span>
-              </div>
-              
-              <h1 className="text-5xl md:text-7xl font-bold text-gray-900 leading-tight pb-12 mb-4">
-                Export Finance,
-                <span className="block bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent pb-2">
-                  Reimagined
-                </span>
-              </h1>
-              
-              <p className="text-xl text-gray-600 leading-relaxed max-w-xl">
-                Get up to <span className="font-bold text-blue-600">85% advance</span> on your export invoices in just <span className="font-bold text-blue-600">24 hours</span>. 
-                No collateral. No paperwork hassles. Just growth.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/auth/signup">
-                  <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white text-lg px-8 h-14 shadow-xl shadow-blue-600/30 group">
-                    Start Your Application
-                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition" />
-                  </Button>
-                </Link>
-                <Link href="/dashboard">
-                  <Button 
-                    size="lg" 
-                    className="text-lg px-8 h-14 border-2 border-gray-900 bg-white text-gray-900 hover:bg-gray-900 hover:text-white transition-all group shadow-lg"
-                  >
-                    View Live Demo
-                    <ChevronRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition" />
-                  </Button>
-                </Link>
-              </div>
-
-              {/* Trust Indicators */}
-              <div className="flex items-center gap-6 pt-4">
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-green-600" />
-                  <span className="text-sm text-gray-600">ECGC Insured</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Lock className="h-5 w-5 text-green-600" />
-                  <span className="text-sm text-gray-600">Bank-Grade Security</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Clock className="h-5 w-5 text-green-600" />
-                  <span className="text-sm text-gray-600">24hr Payout</span>
-                </div>
-              </div>
+        <div className="max-w-7xl mx-auto relative z-10">
+          {/* Centered Content */}
+          <div className="text-center space-y-8 max-w-4xl mx-auto">
+            {/* Limited Time Offer Badge */}
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2">
+              <span className="text-sm font-medium text-white">Limited Time Offer</span>
+            </div>
+            
+            <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight pb-6">
+              Ready to 10x your export business?
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-3xl mx-auto">
+              Join 247+ exporters who've unlocked ₹52.4 Cr in working capital.
+            </p>
+            
+            <p className="text-lg md:text-xl text-white/95 font-medium">
+              First 3 transactions: <span className="font-bold">ZERO platform fees!</span> 🎉
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+              <Link href="/auth/signup">
+                <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-10 h-16 shadow-xl font-semibold group">
+                  Get Started Free
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition" />
+                </Button>
+              </Link>
+              <Link href="/dashboard">
+                <Button 
+                  size="lg" 
+                  className="text-lg px-10 h-16 border-2 border-white bg-transparent text-white hover:bg-white hover:text-blue-600 transition-all group shadow-lg font-semibold"
+                >
+                  Try Live Demo
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition" />
+                </Button>
+              </Link>
             </div>
 
-            {/* Right Column - Stats Card */}
-            <div className="relative">
-              <div className="bg-white rounded-2xl shadow-2xl p-8 border border-gray-100">
-                <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-lg font-semibold text-gray-900">Live Platform Stats</h3>
-                  <Badge className="bg-green-500">
-                    <span className="animate-pulse mr-1">●</span> Live
-                  </Badge>
-                </div>
-                
-                <div className="space-y-6">
-                  <div className="flex items-center justify-between p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl">
-                    <div>
-                      <p className="text-sm text-gray-600 mb-1">Total Financed</p>
-                      <p className="text-3xl font-bold text-gray-900">₹52.4 Cr</p>
-                      <p className="text-xs text-green-600 mt-1">↑ 23% this month</p>
-                    </div>
-                    <BarChart3 className="h-12 w-12 text-blue-600 opacity-50" />
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="p-4 bg-gray-50 rounded-xl">
-                      <p className="text-sm text-gray-600 mb-1">Active Exporters</p>
-                      <p className="text-2xl font-bold text-gray-900">247</p>
-                      <div className="flex gap-1 mt-2">
-                        {[1,2,3,4,5].map((i) => (
-                          <Star key={i} className="h-3 w-3 fill-yellow-400 text-yellow-400" />
-                        ))}
-                      </div>
-                    </div>
-                    
-                    <div className="p-4 bg-gray-50 rounded-xl">
-                      <p className="text-sm text-gray-600 mb-1">Avg. Payout Time</p>
-                      <p className="text-2xl font-bold text-gray-900">18hrs</p>
-                      <p className="text-xs text-green-600 mt-2">6hrs faster</p>
-                    </div>
-                  </div>
-
-                  <div className="p-4 bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl border border-green-200">
-                    <div className="flex items-center gap-2 mb-2">
-                      <CheckCircle className="h-4 w-4 text-green-600" />
-                      <p className="text-sm font-medium text-gray-900">Success Rate</p>
-                    </div>
-                    <div className="flex items-end gap-2">
-                      <p className="text-3xl font-bold text-gray-900">98.5%</p>
-                      <p className="text-sm text-gray-600 mb-1">approval rate</p>
-                    </div>
-                  </div>
-                </div>
+            {/* Trust Indicators with Checkmarks */}
+            <div className="flex flex-wrap items-center justify-center gap-8 pt-8">
+              <div className="flex items-center gap-2">
+                <CheckCircle className="h-5 w-5 text-white" />
+                <span className="text-sm md:text-base text-white/90">No credit card required</span>
               </div>
-              
-              {/* Floating Badge */}
-              <div className="absolute -top-4 -right-4 bg-gradient-to-r from-orange-500 to-pink-500 text-white rounded-full p-4 shadow-xl animate-bounce">
-                <p className="text-xs font-bold">NEW</p>
+              <div className="flex items-center gap-2">
+                <CheckCircle className="h-5 w-5 text-white" />
+                <span className="text-sm md:text-base text-white/90">Setup in 2 minutes</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle className="h-5 w-5 text-white" />
+                <span className="text-sm md:text-base text-white/90">Cancel anytime</span>
               </div>
             </div>
           </div>
