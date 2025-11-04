@@ -221,6 +221,9 @@ export default function AdminDashboardPage() {
               </div>
             </CardContent>
           </Card>
+
+          {/* Buyer Risk Scores */}
+          <Card>
             <CardHeader>
               <CardTitle className="flex items-center space-x-2">
                 <Shield className="h-5 w-5" />
