@@ -82,9 +82,9 @@ export default function Home() {
                 <span className="text-sm font-medium text-blue-900">Trusted by India's Leading Exporters</span>
               </div>
               
-              <h1 className="text-5xl md:text-7xl font-bold text-gray-900 leading-tight">
+              <h1 className="text-5xl md:text-7xl font-bold text-gray-900 leading-tight pb-12 mb-4">
                 Export Finance,
-                <span className="block bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                <span className="block bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent pb-2">
                   Reimagined
                 </span>
               </h1>
